@@ -17,7 +17,8 @@
     "url": "https://github.com/jlipps/asyncbox/issues"
   },
   "engines": {
-    "node": ">=16"
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": ">=10"
   },
   "main": "./build/lib/asyncbox.js",
   "bin": {},
@@ -25,7 +26,7 @@
     "lib": "./lib"
   },
   "files": [
-    "lib/**/*.js",
+    "lib/**/*",
     "build/lib/**/*"
   ],
   "dependencies": {
@@ -41,7 +42,13 @@
     "prepare": "npm run rebuild",
     "test": "mocha --exit --timeout 1m \"./test/**/*-specs.ts\"",
     "lint": "eslint .",
+    "format": "prettier -w ./lib",
     "watch": "npm run dev"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "printWidth": 100,
+    "singleQuote": true
   },
   "devDependencies": {
     "@appium/eslint-config-appium-ts": "^2.0.5",
@@ -49,7 +56,6 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@types/bluebird": "^3.5.37",
-    "@types/chai": "^5.2.3",
     "@types/lodash": "^4.14.189",
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.10.1",
@@ -57,11 +63,13 @@
     "chai-as-promised": "^8.0.2",
     "conventional-changelog-conventionalcommits": "^9.0.0",
     "eslint": "^9.39.1",
+    "prettier": "^3.0.0",
     "mocha": "^11.7.5",
     "semantic-release": "^25.0.2",
     "sinon": "^21.0.0",
     "ts-node": "^10.9.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.1.6"
   },
-  "types": "./build/lib/asyncbox.d.ts"
+  "types": "./build/lib/types.d.ts"
 }

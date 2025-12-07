@@ -39,7 +39,7 @@ describe('longSleep', function () {
   it('should work like sleep with values above threshold, but quantized', async function () {
     const now = Date.now();
     await longSleep(50, {thresholdMs: 20, intervalMs: 40});
-    expect(Date.now() - now).to.be.above(79);
+    expect(Date.now() - now).to.be.at.least(79);
   });
   it('should trigger a progress callback if specified', async function () {
     let callCount = 0;
@@ -103,7 +103,7 @@ describe('retry', function () {
     const start = Date.now();
     const res = await retry(3, okFn, 5, 4);
     expect(res).to.equal(20);
-    expect(Date.now() - start).to.be.above(14);
+    expect(Date.now() - start).to.be.at.least(14);
     expect(okFnCalls).to.equal(1);
   });
   it('should retry a failing function and eventually throw the same err', async function () {
@@ -246,7 +246,7 @@ describe('parallel', function () {
       promises.push(asyncFn(v));
     }
     const res = await parallel(promises);
-    expect(Date.now() - start).to.be.above(49);
+    expect(Date.now() - start).to.be.at.least(49);
     expect(Date.now() - start).to.be.below(59);
     expect(res.sort()).to.eql([1, 2, 3]);
   });
