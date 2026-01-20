@@ -1,3 +1,13 @@
+## [5.0.0](https://github.com/appium/asyncbox/compare/v4.1.1...v5.0.0) (2026-01-20)
+
+### ⚠ BREAKING CHANGES
+
+* remove `nodeify` and `nodeifyAll` functions as obsolete
+
+### Features
+
+* remove nodeify* functions as obsolete ([#54](https://github.com/appium/asyncbox/issues/54)) ([3748dcc](https://github.com/appium/asyncbox/commit/3748dccf359d8f68cdeb72660cf76437ef46adfe))
+
 ## [4.1.1](https://github.com/appium/asyncbox/compare/v4.1.0...v4.1.1) (2026-01-20)
 
 ### Bug Fixes
