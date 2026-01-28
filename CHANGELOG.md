@@ -1,3 +1,13 @@
+## [6.1.0](https://github.com/appium/asyncbox/compare/v6.0.1...v6.1.0) (2026-01-28)
+
+### Features
+
+* add option to set asyncmap/asyncfilter concurrency pool limit ([#58](https://github.com/appium/asyncbox/issues/58)) ([b1e6535](https://github.com/appium/asyncbox/commit/b1e65355adafd8325b2fbfe7199810e7ab9fa486))
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @appium/eslint-config-appium-ts ([#59](https://github.com/appium/asyncbox/issues/59)) ([e38530e](https://github.com/appium/asyncbox/commit/e38530e921ea009277befc7050ca281f31efe19a))
+
 ## [6.0.1](https://github.com/appium/asyncbox/compare/v6.0.0...v6.0.1) (2026-01-22)
 
 ### Miscellaneous Chores
